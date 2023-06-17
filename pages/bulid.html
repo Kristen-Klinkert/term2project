@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   
+    
+    
+    <script src="/js/checkout.js"></script>
+    <script src="/js/index.js"></script>
+
+
+    <title>Super Sub</title>
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="row">
+
+      <div class="thumbnail">
+        <div class="overlay">
+         
+        </div>
+        <div class="nav-con">
+          <ul>
+              <a href= "/index.html "><li>Home</li>
+              <li class="active">Build a Sub</li></a>
+              <a href="/pages/checkout.html"><li>Checkout</li></a>
+          </ul>
+      </div>
+    </nav>
+
+ 
+   
+
+ 
+
+
+   
+
+    <form id="subForm" onchange="realTimeCost()">
+      <h3>Custom Sub Builder</h3>
+      <div class="left">
+        <input type="text" class="form-control" placeholder="Create a name for your Sub" id="subName">
+        <select class="form-control" id="size">
+          <option>Choose a Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+
+      <div class="right">
+        <div class="orderCost" id="realTimeCost">R0.00</div>
+      </div>
+
+        <div class="bread-options">
+
+          <h3>Bread Options</h3>
+
+          <div class="bread-checked">
+            <input class="form-check-input" type="radio" name="breadRadio" id="white" data-cost="10" value="white" checked>
+            <label class="form-check-label" for="white">
+              White Bread Roll
+            </label>
+          </div>
+
+          <div class="bread-check">
+            <input class="form-check-input" type="radio" name="breadRadio" id="seeded" data-cost="15" value="seeded">
+            <label class="form-check-label" for="seeded">
+              Seeded Bread Roll
+            </label>
+          </div>
+
+          <div class="bread-check">
+            <input class="form-check-input" type="radio" name="breadRadio" id="sour" data-cost="20" value="sour">
+            <label class="form-check-label" for="sour">
+              Sourdough
+            </label>
+          </div>
+        </div>
+
+
+
+        <div class="toppings">
+          <h3>Topping Options</h3>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="tomatoes" id="tomatoes" data-cost="15">
+            <label class="form-check-label" for="tomatoes">
+              Tomatoes
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="lettuse" id="lettuse" data-cost="10">
+            <label class="form-check-label" for="lettuse">
+              Lettuce
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="cucumber" id="cucumber" data-cost="8">
+            <label class="form-check-label" for="cucumber">
+              Cucumber
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="avo" id="avo" data-cost="12">
+            <label class="form-check-label" for="avo">
+              Avo
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="ham" id="ham" data-cost="17">
+            <label class="form-check-label" for="ham">
+              Ham
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="bacon" id="bacon" data-cost="20">
+            <label class="form-check-label" for="bacon">
+              Bacon
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="chesse" id="cheese" data-cost="14">
+            <label class="form-check-label" for="chesse">
+              Cheese
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="gurcins" id="gurcins" data-cost="18">
+            <label class="form-check-label" for="gurcins">
+              Gurcins
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="chicken" id="chicken" data-cost="12">
+            <label class="form-check-label" for="chicken">
+              Chicken
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="onions" id="onions" data-cost="12">
+            <label class="form-check-label" for="onions">
+              Onions
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="salami" id="salami" data-cost="12">
+            <label class="form-check-label" for="salami">
+              Salami
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="peppers" id="peppers" data-cost="12">
+            <label class="form-check-label" for="peppers">
+              Green Peppers
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="pesto" id="pesto" data-cost="12">
+            <label class="form-check-label" for="pesto">
+              Basil Pesto
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="chilles" id="chilles" data-cost="12">
+            <label class="form-check-label" for="chilles">
+              Chillies  
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="carrot" id="carrot" data-cost="12">
+            <label class="form-check-label" for="carrot">
+              Carrots
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="steak" id="steak" data-cost="12">
+            <label class="form-check-label" for="steak">
+              Steak
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="meatballs" id="meatballs" data-cost="12">
+            <label class="form-check-label" for="Meatballs">
+              Meatballs
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="chips" id="chips" data-cost="12">
+            <label class="form-check-label" for="chips">
+              Chips
+            </label>
+          </div>
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="garlic" id="garlic" data-cost="12">
+            <label class="form-check-label" for="garlic">
+              Garlic
+            </label>
+          </div>
+
+          
+          <div class="top-check">
+            <input class="form-check-input" name="toppings" type="checkbox" value="coleslaw" id="coleslaw" data-cost="12">
+            <label class="form-check-label" for="coleslaw">
+              Coleslaw
+            </label>
+          </div>
+        </div>
+
+        <div class="sauce">
+          <h3>Sauce Options</h3>
+
+          <div class="top-check">
+            <input class="form-check-input" name="sauce" type="checkbox" value="tomatoes sauce" id="tomatoSauce" data-cost="15">
+            <label class="form-check-label" for="tomatoSauce">
+              Tomato sauce
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="sauce" type="checkbox" value="mustard" id="mustard" data-cost="15">
+            <label class="form-check-label" for="mustard">
+              Mustard 
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="sauce" type="checkbox" value="mayo" id="mayo" data-cost="15">
+            <label class="form-check-label" for="mayo">
+              Mayo
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="sauce" type="checkbox" value="bbq" id="bbq" data-cost="15">
+            <label class="form-check-label" for="bbq">
+              BBQ sauce
+            </label>
+          </div>
+
+          <div class="top-check">
+            <input class="form-check-input" name="sauce" type="checkbox" value="sweetChillie" id="sweetChillie" data-cost="15">
+            <label class="form-check-label" for="sweetChillie">
+              Sweet Chillie sauce
+            </label>
+          </div>
+        </div>
+
+        <div class="drink-options">
+
+          <h3>Drink Options</h3>
+
+          <div class="drink-checked">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="water" data-cost="10" value="water" checked>
+            <label class="form-check-label" for="water">
+              Water
+            </label>
+          </div>
+
+          <div class="drink-check">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="cola" data-cost="15" value="cola">
+            <label class="form-check-label" for="cola">
+              Coca-Cola
+            </label>
+          </div>
+
+          <div class="drink-check">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="sprite" data-cost="20" value="sprite">
+            <label class="form-check-label" for="sprite">
+              Sprite
+            </label>
+          </div>
+
+          <div class="drink-check">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="fanta" data-cost="20" value="fanta">
+            <label class="form-check-label" for="fanta">
+              Fanta
+            </label>
+          </div>
+
+          <div class="drink-check">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="red" data-cost="20" value="red">
+            <label class="form-check-label" for="red">
+              RedBull
+            </label>
+          </div>
+
+          <div class="drink-check">
+            <input class="form-check-input" type="radio" name="drinkRadio" id="tea" data-cost="20" value="tea">
+            <label class="form-check-label" for="tea">
+              Ice-tea
+            </label>
+          </div>
+        </div>
+
+
+
+        <button class="btn btn-primary" type="button" onclick="makeSub(); displayOrder()" >Make Sub</button>    
+
+    </form>
+
+    <div class="row">
+      <div class="output">
+        <div class="outHeader">
+          <h3>Your Current Order:</h3>
+          <div class="totalOrder"><h3 id="orderTotal">R0.00</h3></div>
+        </div>
+        <div id="orders">
+
+        </div>
+        <div class="button-con">
+          <button class="btn btn-primary" type="button" onclick="checkOut()">Proceed to Checkout!</button>    
+        </div>
+
+      </div>
+    </div>
+   
+
+
+
+  </body>
+</html>
